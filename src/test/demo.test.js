@@ -1,5 +1,13 @@
-test( 'This is my first test', () => {
-	const isActive = true
+describe( 'Tests on the demo.test.js file', () => {
 
-	if (!isActive) throw new Error('No está activo')
+	test( 'The strings must be the same', () => {
+		// 1. Initialization
+		const message = 'Hello World!'
+
+		// 2. Stimulus
+		const message2 = `Hello World!`
+
+		// 3. Observing behavior
+		expect( message ).toBe( message2 )
+	} )
 } )
