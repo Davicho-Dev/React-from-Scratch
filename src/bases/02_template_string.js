@@ -1,13 +1,13 @@
-const nombre = 'Fernando'
-const apellido = 'Herrera'
+const firstName = 'Fernando'
+const lastName = 'Herrera'
 
-// const nombreCompleto = nombre + ' ' + apellido;
-const nombreCompleto = `${ nombre } ${ apellido }`
+// const fullName = firstName + ' ' + lastName;
+const fullName = `${ firstName } ${ lastName }`
 
-console.log( nombreCompleto )
+console.log( fullName )
 
-function getSaludo( nombre ) {
-	return 'Hola ' + nombre
+export const getGreeting = ( name = 'Carlos' ) => {
+	return `Hello ${ name }`
 }
 
-console.log( `Este es un texto: ${ getSaludo( nombre ) }  ` )
+console.log( `This is a text: ${ getGreeting( name ) }` )
