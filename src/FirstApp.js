@@ -1,17 +1,22 @@
 import PropTypes from 'prop-types'
 
-export const FirstApp = ( { greeting } ) => {
+// export const FirstApp = ( { title, subtitle = `I'm subtitle` } ) => {
+export const FirstApp = ( { title, subtitle } ) => {
 
 	// if ( !greeting ) throw new Error( 'The greeting is necessary!' )
 
 	return <>
-		<h1>{ greeting }</h1>
+		<h1>{ title }</h1>
 		<hr/>
-		<p>My first app</p>
+		<p>{ subtitle }</p>
 	</>
 }
 
 FirstApp.propTypes = {
-	greeting: PropTypes.string.isRequired,
-	// other: PropTypes.number,
+	subtitle: PropTypes.string, title: PropTypes.string.isRequired,
+
+}
+
+FirstApp.defaultProps = {
+	subtitle: `I'm subtitle`,
 }
