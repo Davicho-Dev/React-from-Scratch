@@ -5,3 +5,9 @@ html, body {
 	background-color: #2E2E2E;
 	font-family: Helvetica, Arial, sans-serif;
 }
+
+button {
+	padding: 10px;
+	font-size: 1.3rem;
+	margin-right: 10px;
+}
