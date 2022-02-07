@@ -1,14 +1,13 @@
-import { StrictMode } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 
-import App from './App'
-import reportWebVitals from './reportWebVitals'
+console.log( 'Hello World!' )
 
-ReactDOM.render(
-	<StrictMode>
-		<App/>
-	</StrictMode>,
-	document.getElementById( 'root' ),
-)
+const greeting = <h1>Hi</h1>
 
-reportWebVitals()
+console.log(greeting)
+
+
+const root = document.querySelector('#root')
+
+ReactDOM.render(greeting,root)
