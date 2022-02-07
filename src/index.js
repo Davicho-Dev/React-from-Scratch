@@ -1,13 +1,5 @@
-import React from 'react'
+import { FirstApp } from './FirstApp'
 import ReactDOM from 'react-dom'
+import './index.css'
 
-console.log( 'Hello World!' )
-
-const greeting = <h1>Hi</h1>
-
-console.log(greeting)
-
-
-const root = document.querySelector('#root')
-
-ReactDOM.render(greeting,root)
+ReactDOM.render( <FirstApp/>, document.querySelector( '#root' ) )
