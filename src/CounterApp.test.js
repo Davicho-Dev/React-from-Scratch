@@ -31,4 +31,13 @@ describe( 'Test in CounterApp', () => {
 		// expect(counterText).toBe(wrapper.find('h2').text())
 		expect( wrapper.find( 'h2' ).text() ).toBe( '9' )
 	} )
+
+	test( 'You must set the default value with the reset button.', () => {
+		const wrapper = shallow( <CounterApp value={ 105 }/> )
+
+		wrapper.find( 'button' ).at( 0 ).simulate( 'click' )
+		wrapper.find( 'button' ).at( 1 ).simulate( 'click' )
+
+		expect( wrapper.find( 'h2' ).text() ).toBe( '105' )
+	} )
 } )
