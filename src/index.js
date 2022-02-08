@@ -4,6 +4,6 @@ import ReactDOM from 'react-dom'
 import './index.css'
 
 ReactDOM.render( <StrictMode>
-		<CounterApp value={ 6543 }/>
+		<CounterApp value={ 10 }/>
 	</StrictMode>
 	, document.querySelector( '#root' ) )
