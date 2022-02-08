@@ -1,4 +1,3 @@
-
 import { shallow } from 'enzyme'
 import React from 'react'
 
@@ -15,9 +14,25 @@ describe( 'Test in FirstApp', () => {
 		// expect( getByText( greeting + '!' ) ).toBeInTheDocument()
 		const greeting = `Hi, i'm Goku`
 
-		const wrapper = shallow(<FirstApp title={greeting}/>)
+		const wrapper = shallow( <FirstApp title={ greeting }/> )
 
 		expect( wrapper ).toMatchSnapshot()
+
+	} )
+
+	test( 'Debe mostrar el subtitulo enviado por props', () => {
+		const greeting = `Hi, i'm Goku`
+		const subtitle = `I'm subtitle`
+
+		const wrapper = shallow( <FirstApp
+				title={ greeting }
+				subtitle={ subtitle }
+			/>,
+		)
+
+		const paragraphText = wrapper.find('p').text()
+
+		expect( paragraphText ).toBe(subtitle)
 
 	} )
 } )
