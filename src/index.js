@@ -2,9 +2,9 @@ import { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
 
 import './index.css'
-import { FirstApp } from './FirstApp'
+import { CounterApp } from './CounterApp'
 
 ReactDOM.render( <StrictMode>
-		<FirstApp title={`Hi, i'm Goku`}/>
+		<CounterApp value={10}/>
 	</StrictMode>
 	, document.querySelector( '#root' ) )
