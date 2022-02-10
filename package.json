@@ -18,7 +18,8 @@
 		"web-vitals": "^2.1.0"
 	},
 	"devDependencies": {
-		"cypress": "^9.4.1"
+		"cypress": "^9.4.1",
+		"prop-types": "^15.8.1"
 	},
 	"eslintConfig": {
 		"extends": [
