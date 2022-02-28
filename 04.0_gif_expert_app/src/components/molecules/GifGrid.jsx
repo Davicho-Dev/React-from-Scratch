@@ -1,23 +1,14 @@
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
 
-import config from '../../api/config'
+import getGifs from '../../helpers/getGifs'
 import GifGridItem from '../molecules/GifGridItem'
 
 export const GifGrid = ( { category } ) => {
-
-	const getGifs = async () => {
-		const url = `https://api.giphy.com/v1/gifs/search?q=${ category }&limit=10&${ config.GIPHY_API_KEY }`
-
-		const resp     = await fetch( url )
-		const { data } = await resp.json()
-
-		setImages( data )
-	}
 	const [ images, setImages ] = useState( [] )
 
 	useEffect( () => {
-		getGifs(category)
+		getGifs(category).then(data =>	setImages( data ))
 	}, [] )
 
 	return (
