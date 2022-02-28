@@ -19,7 +19,7 @@ export const AddCategoryForm = ( { setCategories } ) => {
 	}
 
 	return <form onSubmit={ hdlSubmit }>
-		<AddCategoryInput value={ inputValue } onChange={ hdlInputChange }/>
+		<AddCategoryInput placeholder={'Insert category'} value={ inputValue } onChange={ hdlInputChange }/>
 	</form>
 }
 

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import config from '../../api/config'
 
@@ -13,6 +13,7 @@ export const GifGrid = ( { category } ) => {
 
 		setImages( data )
 	}
+	const [ images, setImages ] = useState( [] )
 
 	useEffect( () => {
 		getGifs(category)
@@ -20,7 +21,21 @@ export const GifGrid = ( { category } ) => {
 
 	return (
 		<>
-			<h3>{ category }</h3>
+			<hr style={ { marginTop: '.5rem' } }/>
+			<h3 style={ { margin: '.5rem 0 1rem 0' } }>{ category }</h3>
+			<section className={ 'grid' }>
+				{ images.map( ( {
+													id,
+													images: { downsized_medium },
+													title
+												} ) => (
+						<figure className={ 'grid__card grid__card--hover' }>
+							<img className={ 'grid__card__img' } src={ downsized_medium?.url } alt=''/>
+							<figcaption className={ 'grid__card__title' }>{ title }</figcaption>
+						</figure>
+					)
+				) }
+			</section>
 		</>
 	)
 }
