@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { useEffect } from 'react'
 
 import config from '../../api/config'
 
@@ -13,6 +14,9 @@ export const GifGrid = ( { category } ) => {
 		setImages( data )
 	}
 
+	useEffect( () => {
+		getGifs(category)
+	}, [] )
 
 	return (
 		<>
