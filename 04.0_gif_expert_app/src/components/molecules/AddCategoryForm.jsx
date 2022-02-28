@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import { AddCategoryInput } from '../atoms/AddCategoryInput'
 
-export const AddCategoryForm = ( { setCategories } ) => {
+const AddCategoryForm = ( { setCategories } ) => {
 	const [ inputValue, setInputValue ] = useState( '' )
 
 	const hdlInputChange = ( { target } ) => {
@@ -12,6 +12,7 @@ export const AddCategoryForm = ( { setCategories } ) => {
 
 	const hdlSubmit = ( e ) => {
 		e.preventDefault()
+
 		if ( inputValue.trim().length > 2 ) {
 			setCategories( ( categories ) => [ inputValue, ...categories ] )
 			setInputValue( '' )
@@ -27,3 +28,4 @@ AddCategoryForm.propTypes = {
 	setCategories: PropTypes.func.isRequired,
 }
 
+export default AddCategoryForm
