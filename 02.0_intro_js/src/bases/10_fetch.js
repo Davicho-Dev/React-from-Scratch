@@ -1,6 +1,6 @@
-const apiKey = 'xOGPA4J9seMma4rgsruXb7IO9WAhx5El'
+import config from '02.0_intro_js/src/api/config'
 
-const request = fetch( `https://api.giphy.com/v1/gifs/random?api_key=${ apiKey }` )
+const request = fetch( `https://api.giphy.com/v1/gifs/random?${ config.GIPHY_API_KEY }` )
 
 request.then( resp => resp.json() )
 	.then( ( { data: { images } } ) => {

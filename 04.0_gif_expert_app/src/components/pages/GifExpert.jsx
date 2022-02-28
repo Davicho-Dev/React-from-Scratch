@@ -12,9 +12,7 @@ export const GifExpert = () => {
 		<AddCategoryForm setCategories={ setCategories }/>
 		<ol>
 			{ categories.map( ( category, index ) => (
-				<>
-					<GifGrid key={ category + index } category={ category }/>
-				</>
+				<GifGrid key={ category + index } category={ category }/>
 			) ) }
 		< /ol>
 	</>

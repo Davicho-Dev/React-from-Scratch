@@ -2,23 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/01_intro_react" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/02-intro-js" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/02_intro_js" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/02_intro_react" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/03-counter" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/03.1_Testing" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/03_counter" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/03_intro_js" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/04-gif-expert-app" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/04_counter" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/04_gif_expert_app" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/05-hook-app" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/05_gif_expert_app" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/06_heroes_app" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/07-heroes-app" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/heroes-app" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/intro" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/intro-js" vcs="Git" />
   </component>
 </project>

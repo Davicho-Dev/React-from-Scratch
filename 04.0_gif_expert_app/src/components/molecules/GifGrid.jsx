@@ -1,22 +1,27 @@
 import PropTypes from 'prop-types'
 
+import config from '../../api/config'
+
 export const GifGrid = ( { category } ) => {
-	const apiKey = 'xOGPA4J9seMma4rgsruXb7IO9WAhx5El'
 
 	const getGifs = async () => {
-		const url = `https://api.giphy.com/v1/gifs/search?q=Rick+and+Morty&limit=10&api_key=${apiKey}`
+		const url = `https://api.giphy.com/v1/gifs/search?q=${ category }&limit=10&${ config.GIPHY_API_KEY }`
 
-		const resp = await fetch( url )
+		const resp     = await fetch( url )
 		const { data } = await resp.json()
-		console.log( data )
+
+		setImages( data )
 	}
 
-	getGifs()
 
-	return <h3>{ category }</h3>
+	return (
+		<>
+			<h3>{ category }</h3>
+		</>
+	)
 }
 
 GifGrid.propTypes = {
-	category: PropTypes.string.isRequired,
+	category: PropTypes.string.isRequired
 }
 
