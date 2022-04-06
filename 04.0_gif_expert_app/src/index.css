@@ -44,10 +44,11 @@ input {
 }
 
 .grid__card--hover:hover {
-	flex: 10 1 30%;
+	flex: 10 1 40%;
 }
+
 .grid__card--hover:hover ~ .grid__card--hover {
-	flex: 1 10 15%;
+	flex: 1 10 calc((60% - 3rem) / 3);
 }
 
 .grid__card__img {
