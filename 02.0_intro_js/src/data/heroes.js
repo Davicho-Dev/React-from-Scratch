@@ -6,7 +6,7 @@ const heroes = [
     },
     {
         id: 2,
-        name: 'Spider-man',
+        name: 'Spiderman',
         owner: 'Marvel'
     },
     {
@@ -26,7 +26,7 @@ const heroes = [
     },
 ];
 
-// export const owners = ['DC','Marvel'];
+export const owners = ['DC','Marvel'];
 
 export default heroes;
 // export {
