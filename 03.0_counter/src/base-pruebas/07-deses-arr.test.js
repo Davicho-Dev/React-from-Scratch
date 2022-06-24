@@ -1,7 +1,7 @@
 import retornaArreglo from './07-deses-arr'
 
 describe( '07-deses-arr test suite', () => {
-	it( 'Should ', () => {
+	it( 'Should return types', () => {
 		const [ letters, numbers ] = retornaArreglo()
 
 		expect( letters ).toBe( 'ABC' )
