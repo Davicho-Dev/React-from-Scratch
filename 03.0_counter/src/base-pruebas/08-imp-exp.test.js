@@ -20,7 +20,7 @@ describe( '08-imp-exp test suite', () => {
 		const owner = 'Marvel'
 		const heroList = getHeroesByOwner( owner )
 
-		expect( heroList.length ).toBe(2)
+		expect( heroList ).toHaveLength(2)
 		expect( heroList ).toEqual( heroes.filter( ( hero ) => hero.owner === owner ) )
 	} )
 
@@ -28,7 +28,7 @@ describe( '08-imp-exp test suite', () => {
 		const owner = 'DC'
 		const heroList = getHeroesByOwner( owner )
 
-		expect( heroList.length ).toBe( 3 )
+		expect( heroList ).toHaveLength( 3 )
 		expect( heroList ).toEqual(
 			[
 				{
