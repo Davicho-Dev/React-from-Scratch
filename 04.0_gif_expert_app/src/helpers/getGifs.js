@@ -1,10 +1,11 @@
-import config from "../api/config";
+const getGifs = async ( category ) => {
+	// API Key
+	// xOGPA4J9seMma4rgsruXb7IO9WAhx5El
+	const resp = await fetch( `https://api.giphy.com/v1/gifs/search?api_key=xOGPA4J9seMma4rgsruXb7IO9WAhx5El&q=${ category }&limit=8` )
+	const { data } = await resp.json()
 
-const getGifs = async (category) => {
-  const resp = await fetch(`https://api.giphy.com/v1/gifs/search?q=${encodeURI(category)}&limit=20&${config.GIPHY_API_KEY}`);
-  const { data } = await resp.json();
 
-  return data;
-};
+	return data.map( ( { id, images, title } ) => ( { id, url: images?.downsized_medium?.url, title } ) )
+}
 
-export default getGifs;
+export default getGifs
