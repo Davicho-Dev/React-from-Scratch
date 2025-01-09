@@ -1,2 +1,2 @@
 export * from './helpers/apiPublic';
-export * from './constants/env';
+export * from './helpers/apiPrivate';

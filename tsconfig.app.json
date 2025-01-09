@@ -1,0 +1,44 @@
+{
+	"compilerOptions": {
+		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+		"target": "ES2020",
+		"useDefineForClassFields": true,
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"module": "ESNext",
+		"skipLibCheck": true,
+
+		/* Bundler mode */
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"isolatedModules": true,
+		"moduleDetection": "force",
+		"noEmit": true,
+		"jsx": "react-jsx",
+
+		/* Linting */
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedSideEffectImports": true,
+		"baseUrl": "./src",
+		"paths": {
+			"@atoms": ["components/atoms/index.ts"],
+			"@layouts": ["components/layouts/index.ts"],
+			"@molecules": ["components/molecules/index.ts"],
+			"@organisms": ["components/organisms/index.ts"],
+			"@templates": ["components/templates/index.ts"],
+			"@hooks": ["hooks/index.ts"],
+			"@interfaces": ["interfaces/index.ts"],
+			"@pages": ["pages/index.ts"],
+			"@router": ["router/index.ts"],
+			"@services": ["services/index.ts"],
+			"@middlewares": ["store/middlewares/index.ts"],
+			"@query": ["store/query/index.ts"],
+			"@slices": ["store/slices/index.ts"],
+			"@store": ["store/index.ts"],
+			"@utils": ["utils/index.ts"]
+		}
+	},
+	"include": ["src"]
+}
